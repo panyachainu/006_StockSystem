@@ -20,15 +20,10 @@ namespace StockSystem
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        //private int childFormNumber = 0;
-
         public MainForm()
         {
             InitializeComponent();
         }
-
-
-
 
         private bool GetRegister()
         {
@@ -42,24 +37,7 @@ namespace StockSystem
             return UtilitySecurity.VerifyRegister(ActivateCode, SerailNumber);
         }
 
-
-
         //// Custom localizer that changes skin captions 
-        //public class MyBarLocalizer : BarLocalizer
-        //{
-        //    public override string GetLocalizedString(BarString id)
-        //    {
-        //        if (id == BarString.SkinCaptions)
-        //        {
-        //            //Default value for BarString.SkinCaptions:
-        //            //"|DevExpress Style|Caramel|Money Twins|DevExpress Dark Style|iMaginary|Lilian|Black|Blue|Office 2010 Blue|Office 2010 Black|Office 2010 Silver|Office 2007 Blue|Office 2007 Black|Office 2007 Silver|Office 2007 Green|Office 2007 Pink|Seven|Seven Classic|Darkroom|McSkin|Sharp|Sharp Plus|Foggy|Dark Side|Xmas (Blue)|Springtime|Summer|Pumpkin|Valentine|Stardust|Coffee|Glass Oceans|High Contrast|Liquid Sky|London Liquid Sky|The Asphalt World|Blueprint|"
-        //            string defaultSkinCaptions = base.GetLocalizedString(id);
-        //            string newSkinCaptions = defaultSkinCaptions.Replace("|DevExpress Style|", "|My Favorite Skin|");
-        //            return newSkinCaptions;
-        //        }
-        //        return base.GetLocalizedString(id);
-        //    }
-        //}
         private void MainForm_Load(object sender, EventArgs e)
         {
             BarLocalizer.Active = new BarLocalizer();
@@ -93,15 +71,6 @@ namespace StockSystem
                 else
                 {
                     backgroundWorker1.RunWorkerAsync();
-                    //using (var srv = new BCSaleService())
-                    //{
-                    //    Utility._NameBC = srv.Name(Utility._NameBC);
-                    //}
-                    //// Show a sample alert window.
-                    //Image img = imageCollection1.Images[0];
-                    //AlertInfo info = new AlertInfo("Login Success!!", "ยินดีต้อนรับ [ คุณ " + Utility._NameBC + " ] เข้าสู่...โปรแกรมทำสัญญา นะครับ", "เข้าสู้โปรแกรมทำสัญญา",img);
-                    //alertControl1.Show(this, info);
-
                 }
             }
 
@@ -115,10 +84,6 @@ namespace StockSystem
 
         private void Click_LoadSkin()
         {
-            //string SkinName = Utility.GetSkin();
-            //BarAndDockingController c = ribbonControl1.GetController();
-            //c.LookAndFeel.SkinName = SkinName;
-            ////c.LookAndFeel.UseDefaultLookAndFeel = false;
         }
 
         private void Menu_Exit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -126,17 +91,9 @@ namespace StockSystem
             Application.Exit();
         }
 
-
-
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-            //Environment.Exit(1);
         }
-
-
-
-
 
         private void Btn_SkinSave_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -144,14 +101,11 @@ namespace StockSystem
             if (MessageBox.Show("คุณต้องการที่จะบันทึก Skin : " + SkinNameSelect + " นี้หรือไม่ครับ?", "บันทึก Skin", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Utility.SetSkin(SkinNameSelect);
-                //using (var db_Log = new ContractLogService())
-                //    db_Log.InsertLog("", Utility._UserDB, DateTime.Now, this.Text, "", "Save Skin", "", "comboBoxEdit1.EditValue.ToString()", "");
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //toolStrip_Datetime.Text = DateTime.Now.ToString("วัน dddd ที่ d เดือน MMMM พ.ศ.yyyy  เวลา HH:mm:ss น.");
             ToolStatus_Time.Text = DateTime.Now.ToString("วัน dddd ที่ d เดือน MMMM พ.ศ.yyyy  เวลา HH:mm:ss น.");
         }
 
@@ -182,7 +136,6 @@ namespace StockSystem
         private void Menu_BIlling_ItemClick(object sender, ItemClickEventArgs e)
         {
             Frm_TranferARInvoice frm = new Frm_TranferARInvoice();
-            //Frm_Billing frm = new Frm_Billing();
             Utility.Form_Show(frm, this);
         }
 
@@ -208,7 +161,6 @@ namespace StockSystem
         {
             Frm_Report frm = new Frm_Report();
             frm.Report_Select = 1;
-            //Utility.Form_Show(frm, this);
             frm.Show();
         }
 
@@ -216,7 +168,6 @@ namespace StockSystem
         {
             Frm_Report frm = new Frm_Report();
             frm.Report_Select = 2;
-            //Utility.Form_Show(frm, this);
             frm.Show();
         }
 
@@ -235,7 +186,6 @@ namespace StockSystem
         {
             Frm_Report frm = new Frm_Report();
             frm.Report_Select = 3;
-            //Utility.Form_Show(frm, this);
             frm.Show();
         }
 
@@ -249,7 +199,6 @@ namespace StockSystem
         {
             Frm_Report frm = new Frm_Report();
             frm.Report_Select = 4;
-            //Utility.Form_Show(frm, this);
             frm.Show();
         }
 
