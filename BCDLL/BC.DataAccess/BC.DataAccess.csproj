@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DCD2853-313D-4BF3-B8AA-461CB9168A7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BC.DataAccess</RootNamespace>
+    <AssemblyName>BC.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\BCarController.cs" />
+    <Compile Include="Controller\BCARDepositController.cs" />
+    <Compile Include="Controller\BCARDepositUseController.cs" />
+    <Compile Include="Controller\BCARINVOICEController.cs" />
+    <Compile Include="Controller\BCARINVOICESUBController.cs" />
+    <Compile Include="Controller\BCBankBookController.cs" />
+    <Compile Include="Controller\BCBankBranchController.cs" />
+    <Compile Include="Controller\BCBankController.cs" />
+    <Compile Include="Controller\BCChqInController.cs" />
+    <Compile Include="Controller\BCConfigurationsController.cs" />
+    <Compile Include="Controller\BCCreditCardController.cs" />
+    <Compile Include="Controller\BCCreditNoteController.cs" />
+    <Compile Include="Controller\BCInvCreditNoteController.cs" />
+    <Compile Include="Controller\BCPaybillController.cs" />
+    <Compile Include="Controller\BCProjectController.cs" />
+    <Compile Include="Controller\BCRecmoneyController.cs" />
+    <Compile Include="Controller\BCSaleController.cs" />
+    <Compile Include="Controller\BCSaleOrderController.cs" />
+    <Compile Include="Controller\BCSaleOrderSubController.cs" />
+    <Compile Include="Controller\BPSCreditTypeController.cs" />
+    <Compile Include="Controller\CheckConnection.cs" />
+    <Compile Include="Controller\C_BCAPINVOICESUB.cs" />
+    <Compile Include="Controller\C_BCCreditNoteSub.cs" />
+    <Compile Include="Controller\C_BCDebitNoteSub1.cs" />
+    <Compile Include="Controller\C_BCDebitNoteSub2.cs" />
+    <Compile Include="Controller\C_BCFinishGoods.cs" />
+    <Compile Include="Controller\C_BCFinishGoodsSub.cs" />
+    <Compile Include="Controller\C_BCSTKAdjust.cs" />
+    <Compile Include="Controller\C_BCSTKAdjustSub.cs" />
+    <Compile Include="Controller\C_BCStkBalance.cs" />
+    <Compile Include="Controller\C_BCStkBalanceSub.cs" />
+    <Compile Include="Controller\C_BCStkIssRetSub.cs" />
+    <Compile Include="Controller\C_BCStkRefund.cs" />
+    <Compile Include="Controller\C_BCStkRefundSub.cs" />
+    <Compile Include="Controller\C_BCStkWarehouse.cs" />
+    <Compile Include="Controller\C_BCWarehouse.cs" />
+    <Compile Include="Controller\C_IBCAPINVOICE.cs" />
+    <Compile Include="DB\BCContext.cs" />
+    <Compile Include="DB\Cls_SetDB.cs" />
+    <Compile Include="InterfaceBC\I_BCAPINVOICE.cs" />
+    <Compile Include="InterfaceBC\IBCarController.cs" />
+    <Compile Include="InterfaceBC\IBCARDepositController.cs" />
+    <Compile Include="InterfaceBC\IBCARDepositUseController.cs" />
+    <Compile Include="InterfaceBC\IBCARINVOICEController.cs" />
+    <Compile Include="InterfaceBC\IBCARINVOICESUBController.cs" />
+    <Compile Include="InterfaceBC\IBCBankBookController.cs" />
+    <Compile Include="InterfaceBC\IBCBankBranchController.cs" />
+    <Compile Include="InterfaceBC\IBCBankController.cs" />
+    <Compile Include="InterfaceBC\IBCChqInController.cs" />
+    <Compile Include="InterfaceBC\IBCConfigurationsController.cs" />
+    <Compile Include="InterfaceBC\IBCCreditCardController.cs" />
+    <Compile Include="InterfaceBC\IBCCreditNoteController.cs" />
+    <Compile Include="InterfaceBC\IBCInvCreditNoteController.cs" />
+    <Compile Include="InterfaceBC\IBCPaybillController.cs" />
+    <Compile Include="InterfaceBC\IBCProjectController.cs" />
+    <Compile Include="InterfaceBC\IBCRecmoneyController.cs" />
+    <Compile Include="InterfaceBC\IBCSaleController.cs" />
+    <Compile Include="InterfaceBC\IBCSaleOrderController.cs" />
+    <Compile Include="InterfaceBC\IBCSaleOrderSubController.cs" />
+    <Compile Include="InterfaceBC\IBPSCreditTypeController.cs" />
+    <Compile Include="InterfaceBC\IController.cs" />
+    <Compile Include="InterfaceBC\I_BCAPINVOICESUB.cs" />
+    <Compile Include="InterfaceBC\I_BCCreditNoteSub.cs" />
+    <Compile Include="InterfaceBC\I_BCDebitNoteSub1.cs" />
+    <Compile Include="InterfaceBC\I_BCDebitNoteSub2.cs" />
+    <Compile Include="InterfaceBC\I_BCFinishGoods.cs" />
+    <Compile Include="InterfaceBC\I_BCFinishGoodsSub.cs" />
+    <Compile Include="InterfaceBC\I_BCSTKAdjust.cs" />
+    <Compile Include="InterfaceBC\I_BCSTKAdjustSub.cs" />
+    <Compile Include="InterfaceBC\I_BCStkBalance.cs" />
+    <Compile Include="InterfaceBC\I_BCStkBalanceSub.cs" />
+    <Compile Include="InterfaceBC\I_BCStkIssRetSub.cs" />
+    <Compile Include="InterfaceBC\I_BCStkRefund.cs" />
+    <Compile Include="InterfaceBC\I_BCStkRefundSub.cs" />
+    <Compile Include="InterfaceBC\I_BCStkWarehouse.cs" />
+    <Compile Include="InterfaceBC\I_BCWarehouse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BC.Models\BC.Models.csproj">
+      <Project>{59b72790-acd3-4370-9936-ca4a506bb8a6}</Project>
+      <Name>BC.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

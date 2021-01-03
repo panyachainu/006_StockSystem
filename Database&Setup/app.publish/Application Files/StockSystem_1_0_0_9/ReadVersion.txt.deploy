@@ -1,0 +1,3 @@
+﻿version 1.0.0.9
+1. อัพเดทการยกเลิก หน้า Frm_TransListRemain แก้ไขค่าให้เป็นตรงข้าม
+2. เพิ่ม Parameter คลังของ Report 

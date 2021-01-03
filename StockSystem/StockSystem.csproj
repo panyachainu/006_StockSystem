@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{938C841C-294C-4899-B173-3651A7E89D79}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockSystem</RootNamespace>
+    <AssemblyName>StockSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://registerprogramlp.com:2120/Download.registerprogramlp.com/Application/StockSystem/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://Download.registerprogramlp.com/Application/StockSystem/</InstallUrl>
+    <ProductName>StockSystem</ProductName>
+    <PublisherName>StockSystem</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>Index.html</WebPage>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Bookmark-add.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BADB80C872881E3E11D95772924334C1E486F18C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>StockSystem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Frm_ChangeRunning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ChangeRunning.Designer.cs">
+      <DependentUpon>Frm_ChangeRunning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_CreateMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_CreateMenu.Designer.cs">
+      <DependentUpon>Frm_CreateMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DocRunning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DocRunning.Designer.cs">
+      <DependentUpon>Frm_DocRunning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ListTranSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListTranSuccess.Designer.cs">
+      <DependentUpon>Frm_ListTranSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_RegisterSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_RegisterSystem.Designer.cs">
+      <DependentUpon>Frm_RegisterSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report.Designer.cs">
+      <DependentUpon>Frm_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_SetFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_SetFormat.Designer.cs">
+      <DependentUpon>Frm_SetFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_SettingWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_SettingWarehouse.Designer.cs">
+      <DependentUpon>Frm_SettingWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TranferARInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TranferARInvoice.Designer.cs">
+      <DependentUpon>Frm_TranferARInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TranferCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TranferCancel.Designer.cs">
+      <DependentUpon>Frm_TranferCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TranferPayBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TranferPayBill.Designer.cs">
+      <DependentUpon>Frm_TranferPayBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TransListRemain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TransListRemain.Designer.cs">
+      <DependentUpon>Frm_TransListRemain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Frm_WaitProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_WaitProcess.Designer.cs">
+      <DependentUpon>Frm_WaitProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rpt_TranferRemain.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rpt_TranferRemain.Designer.cs">
+      <DependentUpon>Rpt_TranferRemain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rpt_StockAll.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rpt_StockAll.Designer.cs">
+      <DependentUpon>Rpt_StockAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rpt_TranferBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rpt_TranferBalance.Designer.cs">
+      <DependentUpon>Rpt_TranferBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rpt_Tranfer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rpt_Tranfer.Designer.cs">
+      <DependentUpon>Rpt_Tranfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Extension.cs" />
+    <Compile Include="Utility\password.cs" />
+    <Compile Include="Utility\PrecateBuilder.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Utility\UtilitySecurity.cs" />
+    <EmbeddedResource Include="Frm_ChangeRunning.resx">
+      <DependentUpon>Frm_ChangeRunning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_CreateMenu.resx">
+      <DependentUpon>Frm_CreateMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DocRunning.resx">
+      <DependentUpon>Frm_DocRunning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListTranSuccess.resx">
+      <DependentUpon>Frm_ListTranSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_RegisterSystem.resx">
+      <DependentUpon>Frm_RegisterSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report.resx">
+      <DependentUpon>Frm_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_SetFormat.resx">
+      <DependentUpon>Frm_SetFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_SettingWarehouse.resx">
+      <DependentUpon>Frm_SettingWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TranferARInvoice.resx">
+      <DependentUpon>Frm_TranferARInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TranferCancel.resx">
+      <DependentUpon>Frm_TranferCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TranferPayBill.resx">
+      <DependentUpon>Frm_TranferPayBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TransListRemain.resx">
+      <DependentUpon>Frm_TransListRemain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Frm_WaitProcess.resx">
+      <DependentUpon>Frm_WaitProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rpt_TranferRemain.resx">
+      <DependentUpon>Rpt_TranferRemain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rpt_StockAll.resx">
+      <DependentUpon>Rpt_StockAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rpt_TranferBalance.resx">
+      <DependentUpon>Rpt_TranferBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rpt_Tranfer.resx">
+      <DependentUpon>Rpt_Tranfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StockSystem_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BCDLL\BC.DataAccess\BC.DataAccess.csproj">
+      <Project>{2dcd2853-313d-4bf3-b8aa-461cb9168a7b}</Project>
+      <Name>BC.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BCDLL\BC.Models\BC.Models.csproj">
+      <Project>{59b72790-acd3-4370-9936-ca4a506bb8a6}</Project>
+      <Name>BC.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BCDLL\BC.Services\BC.Services.csproj">
+      <Project>{a4d38b6e-fbc3-46ea-be4a-5527ca5ca592}</Project>
+      <Name>BC.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockSystem.DataAccess\StockSystem.DataAccess.csproj">
+      <Project>{6c64e577-f9ab-4a76-9be5-3b0a21384261}</Project>
+      <Name>StockSystem.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockSystem.Models\StockSystem.Models.csproj">
+      <Project>{6e2bacd6-83d1-469f-8a62-b18686cc6fa4}</Project>
+      <Name>StockSystem.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockSystem.Services\StockSystem.Services.csproj">
+      <Project>{2cd82a95-6f34-4b74-b33a-7cc75385ae28}</Project>
+      <Name>StockSystem.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bookmark-add.ico" />
+    <Content Include="ReadVersion.txt" />
+    <Content Include="Support\Login_StockSystem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.CodeParser.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v14.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v14.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v14.1.Wizard">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraWizard.v14.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
