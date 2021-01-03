@@ -201,7 +201,6 @@ namespace StockSystem
             frm.Report_Select = 4;
             frm.Show();
         }
-
        
     }
 }
