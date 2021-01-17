@@ -6,6 +6,7 @@ using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraEditors;
 using System.Text;
+using DevExpress.DataAccess.Sql;
 
 namespace StockSystem.Report
 {
@@ -123,6 +124,13 @@ namespace StockSystem.Report
                     //break;
                 }
             }
+        }
+
+        private void Rpt_StockAll_DataSourceDemanded(object sender, EventArgs e)
+        {
+            CustomSqlQuery query = StockDB.Queries[0] as CustomSqlQuery;
+            query.Sql = @"SELECT * from VStock_TranferAllTableReport";
+            StockDB.RebuildResultSchema();
         }
 
     }

@@ -81,7 +81,7 @@
             // 
             // txt_Pass
             // 
-            this.txt_Pass.EditValue = "";
+            this.txt_Pass.EditValue = "123456";
             this.dxValidationProvider1.SetIconAlignment(this.txt_Pass, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txt_Pass.Location = new System.Drawing.Point(180, 126);
             this.txt_Pass.Name = "txt_Pass";

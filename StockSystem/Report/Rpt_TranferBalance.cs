@@ -6,6 +6,7 @@ using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraEditors;
 using System.Text;
+using DevExpress.DataAccess.Sql;
 
 namespace StockSystem.Report
 {
@@ -143,6 +144,13 @@ namespace StockSystem.Report
                     //break;
                 }
             }
+        }
+
+        private void Rpt_TranferBalance_DataSourceDemanded(object sender, EventArgs e)
+        {
+            CustomSqlQuery query = StockDB.Queries[0] as CustomSqlQuery;
+            query.Sql = @"select * from VStock_ItemSum_RealTime order by ItemCode";
+            StockDB.RebuildResultSchema();
         }
 
     }

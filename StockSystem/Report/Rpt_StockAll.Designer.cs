@@ -40,7 +40,7 @@
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            this.StockDB = new DevExpress.DataAccess.Sql.SqlDataSource("olay.CPS2015.dbo");
+            this.StockDB = new DevExpress.DataAccess.Sql.SqlDataSource("._CPSConnection");
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -106,7 +106,7 @@
             // StockDB
             // 
             customSqlQuery1.Name = "StockAll";
-            customSqlQuery1.Sql = "select * from VStock_TranferAllTableReport";
+            customSqlQuery1.Sql = "select Top 1 * from VStock_TranferAllTableReport";
             customSqlQuery2.Name = "BCConfigurations";
             customSqlQuery2.Sql = "select * from BCConfigurations";
             customSqlQuery3.Name = "StockAll_Item";
@@ -729,6 +729,7 @@
             this.Version = "14.1";
             this.ParametersRequestBeforeShow += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestEventArgs>(this.Rpt_Tranfer_ParametersRequestBeforeShow);
             this.ParametersRequestSubmit += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestEventArgs>(this.Rpt_Tranfer_ParametersRequestSubmit);
+            this.DataSourceDemanded += new System.EventHandler<System.EventArgs>(this.Rpt_StockAll_DataSourceDemanded);
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Rpt_Tranfer_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_Where)).EndInit();

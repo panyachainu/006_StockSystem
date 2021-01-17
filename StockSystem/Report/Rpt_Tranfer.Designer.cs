@@ -34,7 +34,6 @@
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery3 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery4 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery5 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
-            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery6 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -43,9 +42,7 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            this.StockDB = new DevExpress.DataAccess.Sql.SqlDataSource("olay.CPS2015.dbo");
+            this.StockDB = new DevExpress.DataAccess.Sql.SqlDataSource("._CPSConnection");
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -104,8 +101,6 @@
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.DocNoInv = new DevExpress.XtraReports.Parameters.Parameter();
-            this.DocNoInv2 = new DevExpress.XtraReports.Parameters.Parameter();
             this.ItemWH1 = new DevExpress.XtraReports.Parameters.Parameter();
             this.ItemWH2 = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -125,17 +120,14 @@
             customSqlQuery3.Sql = resources.GetString("customSqlQuery3.Sql");
             customSqlQuery4.Name = "BCItemGroup";
             customSqlQuery4.Sql = resources.GetString("customSqlQuery4.Sql");
-            customSqlQuery5.Name = "Stock_DocNoInv";
-            customSqlQuery5.Sql = resources.GetString("customSqlQuery5.Sql");
-            customSqlQuery6.Name = "BCWarehouse";
-            customSqlQuery6.Sql = "select Code,Name from BCWarehouse";
+            customSqlQuery5.Name = "BCWarehouse";
+            customSqlQuery5.Sql = "select Code,Name from BCWarehouse";
             this.StockDB.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             customSqlQuery1,
             customSqlQuery2,
             customSqlQuery3,
             customSqlQuery4,
-            customSqlQuery5,
-            customSqlQuery6});
+            customSqlQuery5});
             this.StockDB.ResultSchemaSerializable = resources.GetString("StockDB.ResultSchemaSerializable");
             // 
             // Detail
@@ -768,48 +760,26 @@
             this.GroupFooter1.HeightF = 29.16667F;
             this.GroupFooter1.Name = "GroupFooter1";
             // 
-            // DocNoInv
-            // 
-            this.DocNoInv.Description = "เลขที่ Inv. :";
-            dynamicListLookUpSettings5.DataAdapter = null;
-            dynamicListLookUpSettings5.DataMember = "Stock_DocNoInv";
-            dynamicListLookUpSettings5.DataSource = this.StockDB;
-            dynamicListLookUpSettings5.DisplayMember = "DocNo";
-            dynamicListLookUpSettings5.ValueMember = "DocNo";
-            this.DocNoInv.LookUpSettings = dynamicListLookUpSettings5;
-            this.DocNoInv.Name = "DocNoInv";
-            // 
-            // DocNoInv2
-            // 
-            this.DocNoInv2.Description = "ถึงเลขที่ Inv. :";
-            dynamicListLookUpSettings6.DataAdapter = null;
-            dynamicListLookUpSettings6.DataMember = "Stock_DocNoInv";
-            dynamicListLookUpSettings6.DataSource = this.StockDB;
-            dynamicListLookUpSettings6.DisplayMember = "DocNo";
-            dynamicListLookUpSettings6.ValueMember = "DocNo";
-            this.DocNoInv2.LookUpSettings = dynamicListLookUpSettings6;
-            this.DocNoInv2.Name = "DocNoInv2";
-            // 
             // ItemWH1
             // 
             this.ItemWH1.Description = "คลังที่ :";
-            dynamicListLookUpSettings7.DataAdapter = null;
-            dynamicListLookUpSettings7.DataMember = "BCWarehouse";
-            dynamicListLookUpSettings7.DataSource = this.StockDB;
-            dynamicListLookUpSettings7.DisplayMember = "Name";
-            dynamicListLookUpSettings7.ValueMember = "Code";
-            this.ItemWH1.LookUpSettings = dynamicListLookUpSettings7;
+            dynamicListLookUpSettings5.DataAdapter = null;
+            dynamicListLookUpSettings5.DataMember = "BCWarehouse";
+            dynamicListLookUpSettings5.DataSource = this.StockDB;
+            dynamicListLookUpSettings5.DisplayMember = "Name";
+            dynamicListLookUpSettings5.ValueMember = "Code";
+            this.ItemWH1.LookUpSettings = dynamicListLookUpSettings5;
             this.ItemWH1.Name = "ItemWH1";
             // 
             // ItemWH2
             // 
             this.ItemWH2.Description = "ถึงคลังที่ : ";
-            dynamicListLookUpSettings8.DataAdapter = null;
-            dynamicListLookUpSettings8.DataMember = "BCWarehouse";
-            dynamicListLookUpSettings8.DataSource = this.StockDB;
-            dynamicListLookUpSettings8.DisplayMember = "Name";
-            dynamicListLookUpSettings8.ValueMember = "Code";
-            this.ItemWH2.LookUpSettings = dynamicListLookUpSettings8;
+            dynamicListLookUpSettings6.DataAdapter = null;
+            dynamicListLookUpSettings6.DataMember = "BCWarehouse";
+            dynamicListLookUpSettings6.DataSource = this.StockDB;
+            dynamicListLookUpSettings6.DisplayMember = "Name";
+            dynamicListLookUpSettings6.ValueMember = "Code";
+            this.ItemWH2.LookUpSettings = dynamicListLookUpSettings6;
             this.ItemWH2.Name = "ItemWH2";
             // 
             // Rpt_Tranfer
@@ -834,8 +804,6 @@
             this.ItemCode2,
             this.ItemGroup1,
             this.ItemGroup2,
-            this.DocNoInv,
-            this.DocNoInv2,
             this.ItemWH1,
             this.ItemWH2});
             this.SnapGridSize = 1F;
@@ -847,6 +815,7 @@
             this.Version = "14.1";
             this.ParametersRequestBeforeShow += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestEventArgs>(this.Rpt_Tranfer_ParametersRequestBeforeShow);
             this.ParametersRequestSubmit += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestEventArgs>(this.Rpt_Tranfer_ParametersRequestSubmit);
+            this.DataSourceDemanded += new System.EventHandler<System.EventArgs>(this.Rpt_Tranfer_DataSourceDemanded);
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Rpt_Tranfer_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_Where)).EndInit();
@@ -918,8 +887,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
-        private DevExpress.XtraReports.Parameters.Parameter DocNoInv;
-        private DevExpress.XtraReports.Parameters.Parameter DocNoInv2;
         private DevExpress.XtraReports.Parameters.Parameter ItemWH1;
         private DevExpress.XtraReports.Parameters.Parameter ItemWH2;
     }
